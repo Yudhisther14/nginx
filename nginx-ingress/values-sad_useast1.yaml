@@ -3,8 +3,12 @@ app:
   config:
     baspath: /etc/akhq
 
+loadbalancer:
+  endpoint: locust-useast1.samsungospdev.com
+
 ingress:
   enabled: true
   annotations:
     alb.ingress.kubernetes.io/target-type: ip 
-    external-dns.alpha.kubernetes.io/hostname: locust-useast1.samsungospdev.com
+    external-dns.alpha.kubernetes.io/hostname: {{ .Values.loadbalancer.endpoint }}
+    # external-dns.alpha.kubernetes.io/hostname: locust-useast1.samsungospdev.com
