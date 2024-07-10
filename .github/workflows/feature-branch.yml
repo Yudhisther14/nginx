@@ -48,7 +48,7 @@ jobs:
         with:
           add: ./feature-branch-list/${{ env.FILE_NAME }}.json
           message: 'GIT-ACTIONS: Updated "${{ env.FILE_NAME }}" JSON File on feature-branch-list'
-          commiter_name: Github Actions
-          commiter_email: actions@github.com
+          commiter_name: Yudhisther14
+          commiter_email: yudhisthergautam.123@gmail.com
           commit: --signoff
           push: true
