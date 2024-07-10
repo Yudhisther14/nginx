@@ -36,7 +36,7 @@ jobs:
         shell: bash 
         run: |
           sudo apt-get install -y jq
-          echo `{"branchName": "${{ env.CURRENT_BRANCH }}", "serviceName": "${{ env.SERVICE_NAME }}", "uniqueName": "${{ env.UNIQUE_NAME }}"}` > ./feature-branch-list/${{ env.FILE_NAME }}.json
+          echo '{"branchName": "${{ env.CURRENT_BRANCH }}", "serviceName": "${{ env.SERVICE_NAME }}", "uniqueName": "${{ env.UNIQUE_NAME }}"}' > ./feature-branch-list/${{ env.FILE_NAME }}.json
           # branchList=""
           # for file in ./feature-branch-list/*;
           # do
