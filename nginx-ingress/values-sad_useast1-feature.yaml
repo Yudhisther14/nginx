@@ -1,0 +1,13 @@
+app:
+  name: locust
+  config:
+    baspath: /etc/akhq
+loadbalancer:
+  uniquename: mtr
+  region: useast1
+ingress:
+  enabled: true
+  annotations:
+    alb.ingress.kubernetes.io/target-type: ip
+    external-dns.alpha.kubernetes.io/hostname: locust-useast1.{{ .Values.loadbalancer.uniquename }}.samsungospdev.com
+    # external-dns.alpha.kubernetes.io/hostname: locust-useast1.samsungospdev.com
