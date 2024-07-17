@@ -5,6 +5,7 @@ app:
 
 loadbalancer:
   uniquename: locust
+  region: useast1
 
 ingress:
   enabled: true
